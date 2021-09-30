@@ -33,18 +33,13 @@ public class Document extends Managed {
     **/
     public Canvas beginPage(float width, float height) {
         Stats.onNativeCall();
-       return new Canvas(_nBeginPage(_ptr, this, width, height), true, this);
-       // return new Kanvas(_nBeginPage(_ptr, this, width, height), false);
+       return new Canvas(_nBeginPage(_ptr, width, height), true, this);
+       // return new Kanvas(_nBeginPage(_ptr, width, height), false);
     }
  
     public void endPage() {
         Stats.onNativeCall();
         _nEndPage(_ptr);
-    }
-
-    public void writeTo(String path) {
-        Stats.onNativeCall();
-        _nWrite(_ptr, path);
     }
 
     public void close() {
@@ -58,11 +53,9 @@ public class Document extends Managed {
     
  //  public static native long _nBeginPage(long ptr, float width, float height, float left, float top, float right, float bottom);
 
-    public static native long _nBeginPage(long ptr, Document iets, float width, float height);
+    public static native long _nBeginPage(long ptr, float width, float height);
 
     public static native void _nEndPage(long ptr);
-
-    public static native void _nWrite(long ptr, String path);
 
     public static native void _nClose(long ptr);
 }
