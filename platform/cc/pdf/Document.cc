@@ -6,7 +6,6 @@
 #include <iomanip>
 #include <iostream>
 #include <jni.h>
-using namespace std;
 
 class Document {
 public:
