@@ -2,13 +2,7 @@
 #include "SkTime.h"
 #include <iostream>
 #include <jni.h>
-/**
-extern "C" JNIEXPORT jlong JNICALL
-Java_org_jetbrains_skija_pdf_Time__1nMake(JNIEnv *env, jclass jclass) {
 
-  return reinterpret_cast<jlong>(new SkTime());
-}
-**/
 extern "C" JNIEXPORT jlong JNICALL
 Java_org_jetbrains_skija_pdf_DateTime__1nMake(JNIEnv *env, jclass jclass) {
   
