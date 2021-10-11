@@ -12,6 +12,14 @@ public class Point {
     
     @ApiStatus.Internal
     public final float _y;
+    
+    public float getX() {
+       return _x;
+    }
+
+    public float getY() {
+      return _y;
+    }
 
     @Contract("null -> null; !null -> new")
     public static @Nullable float[] flattenArray(@Nullable Point[] pts) {
